@@ -41,13 +41,13 @@
 // //task3
 
 // let arr = [];
-// arr [0] = 56;
+// arr [0] = 56;  // ot arr.push(56, "Twenty", false, null);
 // arr [1] = "Twenty";
 // arr [2] = false;
 // arr [3] = null;
 // alert("Number of elements in the initial array: " + arr.length);
 
-// let newElement = prompt("Please enter anything");
+// let newElement = prompt("Please enter anything");  // or arr[4] = prompt("enter number ");
 // arr.push(newElement);
 // alert("The fifth element is: " + arr[4]);
 
@@ -57,7 +57,7 @@
 
 // //task4
 
-// let cities = ["Rome", "Lviv", "Warsaw", 32, 34, "Oslo"];
+// let cities = ["Rome", "Lviv", "Warsaw", 32, 34, "Oslo"];   // or cities.join(" * ");
 // let oneLine = cities[0];
 // for (let i = 1; i < cities.length; i++) {
 //     oneLine = oneLine + "*" + cities[i];
@@ -67,7 +67,7 @@
 
 // //task5
 
-// let isAdult = prompt("Are you 18 years old or older?");
+// let isAdult = prompt("Are you 18 years old or older?");  // or Number(prompt("Please enter your age"));
 // let answer5 = (isAdult >=18) ? "You are of legal age" : "You are still too young";
 // console.log(answer5);
 
@@ -95,25 +95,6 @@
 //         console.log("This is not a triangle. This is a square.");
 // }
 
-
-// // task7  version1 - not working
-// let currentHour = new Date().getHours();
-// console.log("Current time: " + currentHour);
-
-// switch (currentHour) {
-//     case currentHour >= 23 && currentHour < 5:
-//         alert("Good night!");
-//         break;
-//     case currentHour >= 5 && currentHour < 11:
-//         alert("Good morning!");
-//         break;
-//     case currentHour >= 11 && currentHour < 17:
-//         alert("Good afternoon!");
-//         break;
-//     case currentHour >= 17 && currentHour < 23:
-//         alert("Good evening!");
-//         break;
-// }
 
 // // task7  version1
 // let currentHour2 = new Date().getHours();
