@@ -45,19 +45,19 @@
 // }
 // raiseToDegree(num4, degree);
 
-// task5  'a function that returns the min of an arbitary number of arguments'
+//task5  'a function that returns the min of an arbitary number of arguments'
 
-// function findMin (... args) {
-//     let min;
-//     min = Math.min(...args);
-//     return min;
-// }
-// let arr = [9, 5, -9, 6, -3, 8];
-// let min1 = findMin(...arr);         // this is working but direct array insert - not working
-// let min2 = findMin(45, 5, 7, 9, 10, 11, -6, 12, 12, -7, 13, 14);
+function findMin (...arguments) {
+    let min;
+    min = Math.min(...arguments);
+    return min;
+}
+//let arr = [9, 5, -9, 6, -3, 8];
+let min1 = findMin(...[9, 5, -9, 6, -3, 8]);         // this is not working without ... before []
+let min2 = findMin(45, 5, 7, 9, 10, 11, -6, 12, 12, -7, 13, 14);
 
-// console.log(min1);
-// console.log(min2);
+console.log(min1);
+console.log(min2);
 
 // task6   'check if the elements in an array are unique (do not have duplicates)'  - not working
 

@@ -90,23 +90,40 @@ function showUserId(id) {
  }
 }
 // try {
-//     let a = showUserId(-23);
+//     let a = showUserId(23);
 //     console.log(a);
+//     console.log(typeof a);
 // } catch (err) {
 //     console.log(err);
 // }
 
-function showUsers(...ids) {
-    let arrIds = [];
-    for (let i = 0; i < ids.length; i++) {
+// function showUsers(...ids) {
+//     let arrIds = [];
+//     for (let i = 0; i < ids.length; i+=1) {  // for (let i in ids) {  // i is a sequence number of an element
         
-        let u = showUserId(ids[i]);
-        console.log(u);
-    arrIds.push(u);
-        //console.log("neg");
+//         let u = showUserId(ids[i]);         // for (let el of ids) { let u = showUserId(el)}
+//         console.log(u);
+//     arrIds.push(u);
+//         //console.log("neg");
+//     }
+//     return arrIds;
+// }
+
+// let u = {};
+// console.log(typeof u);
+// u = showUserId(-12);
+// console.log(u);
+
+function showUsers(arguments, showUserId) {
+    let arrIds = [];
+    let u = {};
+    for (let element of arguments) {
+        //console.log(element);
+        u = showUserId(element);
+        arrIds.push(u);
     }
     return arrIds;
 }
 let arr4 = [12, 15, -14, 19];
-let b = showUsers(arr4);
+let b = showUsers([12, 15, -14, 19], showUserId);
 console.log("b is " + b);
