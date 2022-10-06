@@ -78,7 +78,7 @@
 
 // task4
 
-function showUserId(id) {
+function showUserId(id) {                       // works OK
  if (id < 0) {
     throw "ID number must not be negative " + id;
  } else {
@@ -97,33 +97,26 @@ function showUserId(id) {
 //     console.log(err);
 // }
 
-// function showUsers(...ids) {
-//     let arrIds = [];
-//     for (let i = 0; i < ids.length; i+=1) {  // for (let i in ids) {  // i is a sequence number of an element
-        
-//         let u = showUserId(ids[i]);         // for (let el of ids) { let u = showUserId(el)}
-//         console.log(u);
-//     arrIds.push(u);
-//         //console.log("neg");
-//     }
-//     return arrIds;
-// }
-
-// let u = {};
-// console.log(typeof u);
-// u = showUserId(-12);
-// console.log(u);
-
-function showUsers(arguments, showUserId) {
+function showUsers(arguments, showUserId) {   //not working properly - returns either Exception or Array 
     let arrIds = [];
     let u = {};
     for (let element of arguments) {
-        //console.log(element);
+        
+        if (element < 0) {
+            showUserId(element);
+            
+        } else if (element < 0) {
+            
+            continue;
+        } else {
         u = showUserId(element);
         arrIds.push(u);
+        }
     }
     return arrIds;
 }
-let arr4 = [12, 15, -14, 19];
-let b = showUsers([12, 15, -14, 19], showUserId);
-console.log("b is " + b);
+try {
+console.log(showUsers([12, 15, -14, 19], showUserId));
+} catch (e) {
+    console.log(e);
+}

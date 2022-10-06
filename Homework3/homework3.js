@@ -8,7 +8,7 @@
 // console.log(product);
 
 
-// // task2     'check the current number if it's even or odd'
+// // task2     'check the current number if it's even or odd'  (forEach or use the ternary operator)
 
 // for (let i = 0; i < 16; i++) {
 //     if (i % 2 === 0) {
