@@ -72,7 +72,7 @@
 // try {
 //     console.log(showMonthName(3));
 // } catch (err) {
-//     console.log(err.name + ": " + err.message);
+//     console.log(err.name + ": " + err.message);  //or console.error(err.name, err.message)
 // }
 
 
@@ -81,14 +81,15 @@
 function showUserId(id) {                       // works OK
  if (id < 0) {
     throw "ID number must not be negative " + id;
- } else {
-    let user = {
-        ID : id,
-        //name : ""
-    };
-    return user;
+ } 
+//  else {
+//     let user = {    // or w/o else , just return {id};  no need to return { id: id }
+//         ID : id,
+//         //name : ""
+//     };
+    return {id};
  }
-}
+
 // try {
 //     let a = showUserId(23);
 //     console.log(a);
@@ -97,26 +98,39 @@ function showUserId(id) {                       // works OK
 //     console.log(err);
 // }
 
-function showUsers(arguments, showUserId) {   //not working properly - returns either Exception or Array 
-    let arrIds = [];
-    let u = {};
-    for (let element of arguments) {
+// function showUsers(arguments, showUserId) {   //not working properly - returns either Exception or Array 
+//     let arrIds = [];
+//     let u = {};
+//     for (let element of arguments) {
         
-        if (element < 0) {
-            showUserId(element);
+//         if (element < 0) {
+//             showUserId(element);
             
-        } else if (element < 0) {
+//         } else if (element < 0) {
             
-            continue;
-        } else {
-        u = showUserId(element);
-        arrIds.push(u);
+//             continue;
+//         } else {
+//         u = showUserId(element);
+//         arrIds.push(u);
+//         }
+//     }
+//     return arrIds;
+// }
+// try {
+// console.log(showUsers([12, 15, -14, 19], showUserId));
+// } catch (e) {
+//     console.log(e);
+// }
+//option2
+function showUsersID (ids) {
+    let result = [];
+    ids.forEach(function(id) {
+        try {
+            let person = showUserId(id);
+            result.push(person);
+        } catch (exception) {
+            console.log(exception.message)
         }
-    }
-    return arrIds;
+    });
 }
-try {
-console.log(showUsers([12, 15, -14, 19], showUserId));
-} catch (e) {
-    console.log(e);
-}
+console.log(showUsersID([13, 16, -17, 18]));
