@@ -1,0 +1,59 @@
+
+<!-- task4.1   NOT READY-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        let l = document.querySelectorAll('li');
+        let arr = [];
+        for (let el of l) {
+            arr.push(el.innerText);
+        }
+        let arr2 = arr.splice(4, 3, arr[1], arr[2], arr[3]);
+        console.log(arr2);
+    </script>
+</body>
+</html>
+
+<!-- task4.2-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        let l = document.querySelectorAll('li');
+        let arr1 = [];
+        for (let el of l) {
+            arr1.push(el.innerText);
+        }
+        alert(arr1[0] + arr1[4] + arr1[1] + arr1[3] + arr1[2]);
+    </script>
+</body>
+</html> -->

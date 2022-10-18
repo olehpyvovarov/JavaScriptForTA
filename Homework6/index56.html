@@ -1,0 +1,68 @@
+<!-- task5 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>I'am a big header!!!</h1>
+        <div id="myDiv">
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+            <p>Third paragraph</p>
+            <p>Fourth paragraph</p>
+        </div>
+        <ul id="myList">
+            <li>Make</li>
+            <li>me</li>
+            <li>horizontal!</li>
+        </ul>
+        <span>Make me invisible, please!</span>
+        <script>
+            let h = document.querySelector("h1");
+            h.style.backgroundColor="green";
+            h.style.fontSize="24px";
+            
+            let ps = document.querySelectorAll("p");   // 'tagName'  or '#id' or '.className'
+            ps[0].style.fontWeight="900";
+            ps[1].style.color="red";
+            ps[2].style.textDecoration="underline";
+            ps[3].style.fontStyle = "italic";
+
+           document.querySelector("#myList").innerHTML="<p>Makemehorizontal!</p>";  //works
+            document.querySelector("span").style.visibility="hidden";
+
+        </script>
+</body>
+</html>
+
+
+<!-- task6-   read teo inputs from a user then swap them-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+    <script>
+        let firstInput = document.getElementById("input1").value = prompt("Enter your 1st message");
+        let secondInput = document.getElementById("input2").value = prompt("Enter your 2nd message");
+        
+        setTimeout(() => {
+            let temp = firstInput;
+            document.getElementById("input1").value = secondInput;
+            document.getElementById("input2").value = temp;
+        }, 2000);
+    </script>
+</body>
+</html> -->
