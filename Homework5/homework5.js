@@ -1,4 +1,4 @@
-// task1
+// task1    function that counts the number of an object's properties
 
 // function propCount (currentObject) {
 //     return Object.keys(currentObject).length;   // "values" or "entries"
@@ -11,8 +11,16 @@
 // }
 // console.log("count of props1 " + propCount(menthor));
 
+// task_1 another option
 
-// task2
+// function getPropertyCount (currObj) {
+//     let osize=0, key;
+//     for (key in currObj) osize++;
+//     return osize;
+// }
+// console.log(get(menthor));
+
+// task2      function put a list of an object's properties into an array
 
 // let menthor2 = {
 //     name : "John2",
@@ -41,8 +49,17 @@
 // //     return obj[key];   //obk = arrKeys
 // // });
 
+// task_2_1  NOTHER OPTION 
 
-// task3
+// function showProps1 (obj) {
+    // Object.values.forEach((element)=>{
+    //     console.log(element);
+    // });
+//     console.log(Object.keys(obj));
+// }
+
+
+// task3      class Person, class Student-reset showFullName meth, create showCourse meth
 
 // class Person {
 //     constructor(name, surname) {
@@ -50,7 +67,7 @@
 //         this.surname = surname;
 //     }
 //     showFullName (name, surname) {
-//         return this.name + this.surname;
+//         return this.name + " " + this.surname;
 //     }
 // }
 // class Student extends Person {
@@ -59,7 +76,7 @@
 //         this.yearEntry = yearEntry;
 //     }
 //     showFullName (middleName) {
-//         return this.name + " " + middleName + " " + this.surname;
+//         return this.name + " " + middleName + " " + this.surname;    // or  return super.showFullName() + " " + middleName
 //     }
 //     showCourse() {
 //         return new Date().getFullYear() - this.yearEntry;
@@ -70,63 +87,109 @@
 // console.log("Current course: " + stud1.showCourse());
 
 
-//task4
+//task_4    sort salary and show it in the format "worker_fullName: salary_value"; dynamic sorting any number of workers
 
-class Worker {
-    _experience = 1.2;
-    constructor(fullName, dayRate, workingDays) {
-        this.fullName = fullName;
-        this.dayRate = dayRate;
-        this.workingDays = workingDays;
-        this.salary = this. dayRate * this.workingDays;
-        if (this.constructor.all === undefined) {
-            this.constructor.all = [this];
-          } else {
-            this.constructor.all.push(this);
-          }
-          this.logParam = function() { console.log(all); };
-    }
-    showSalary() {
-        console.log(this. dayRate * this.workingDays);
-    }
-    showSalaryWithExperience() {
-       console.log(this._experience * this.dayRate * this.workingDays);
-    }
-    get experience() {
-        return this._experience;
-    }
-    set experience(value) {
-        this._experience = value;
-    }
-}
-let worker1 = new Worker("John Johnson", 20, 23);
-console.log(worker1.fullName);                 
-worker1.showSalary();
-worker1.showSalaryWithExperience();
-worker1.experience = 1.5;
-console.log("New experience: ");
-worker1.showSalaryWithExperience();
+// class Worker {
+//     _experience = 1.2;
+//     constructor(fullName, dayRate, workingDays) {
+//         this.fullName = fullName;
+//         this.dayRate = dayRate;
+//         this.workingDays = workingDays;
+//         this.salary = this. dayRate * this.workingDays;
+//         if (this.constructor.all === undefined) {
+//             this.constructor.all = [this];
+//           } else {
+//             this.constructor.all.push(this);
+//           }
+//           this.logParam = function() { console.log(all); };
+//     }
+//     showSalary() {
+//         console.log(this. dayRate * this.workingDays);
+//     }
+//     showSalaryWithExperience() {
+//        console.log(this._experience * this.dayRate * this.workingDays);
+//     }
+//     get experience() {
+//         return this._experience;
+//     }
+//     set experience(value) {
+//         this._experience = value;
+//     }
+// }
+// let worker1 = new Worker("John Johnson", 20, 23);
+// console.log(worker1.fullName);                 
+// worker1.showSalary();
+// worker1.showSalaryWithExperience();
+// worker1.experience = 1.5;
+// console.log("New experience: ");
+// worker1.showSalaryWithExperience();
 
-let worker2 = new Worker("Tom Tomson", 48, 22);
-let worker3 = new Worker("Andy Ander", 29, 23);
+// let worker2 = new Worker("Tom Tomson", 48, 22);
+// let worker3 = new Worker("Andy Ander", 29, 23);
 
-// show workers
+// // show workers
 
-for (var i = 0; i < Worker.all.length; i++) {
-    console.log(Worker.all[i].fullName + " " + Worker.all[i].salary);
-  }
-console.log(worker1.salary);
+// for (var i = 0; i < Worker.all.length; i++) {
+//     console.log(Worker.all[i].fullName + " " + Worker.all[i].salary);
+//   }
+// console.log(worker1.salary);
 
-//sorted salary                 
+// //sorted salary                 
 
-for (var i = 0; i < Worker.all.length; i++) {                   //not working
-    if (Worker.all[i].salary > Worker.all[i].salary) {
-    console.log(Worker.all[i].fullName + " " + Worker.all[i].salary);
-    }
-  }
+// for (var i = 0; i < Worker.all.length; i++) {                   //not working
+//     if (Worker.all[i].salary > Worker.all[i].salary) {
+//     console.log(Worker.all[i].fullName + " " + Worker.all[i].salary);
+//     }
+//   }
+
+// // task 4_1   another option
+// const workersList = [];
+// class Worker {
+//     #experience = 1.2;
+//     constructor(fullName, dayRate, workingDays) {
+//         this.fullName = fullName;
+//         this.dayRate = dayRate;
+//         this.workingDays = workingDays;
+//        workersList.push(this);  // adds our 'this' to the arrray - 'this' is our current Object: when created right added to the array
+//         }
+//     showSalary() {
+//         console.log(`${this.fullName} salary: ${this.dayRate*this.workingDays}`);
+//     }
+//     showSalaryWithExperience() {
+//        console.log(`${this.fullName} salary: ${this.dayRate*this.workingDays*this.#experience}`);
+//     }
+//     showSalaryWorker() {
+//         return `${this.dayRate*this.workingDays*this.#experience}`;
+//     }
+//     get experience() {
+//         return this.#experience;
+//     }
+//     set experience(value) {
+//         this.#experience = value;
+//     }
+//     sortSalaries(workersArray) {
+//         let sortedSalary = workersArray.sort(function(a, b) {
+//             return a.showSalaryWorker() - b.showSalaryWorker();
+//         })
+//         //console.log(sortedSalary);
+//         for (let i = 0;  i < sortedSalary.length; i++) {
+//             console.log(sortedSalary[i].fullName + ":" + sortedSalary[i].showSalaryWorker)
+//         }
+//     }
+// }
+// const worker1 = new Worker("John Johnson", 20, 23);
+// console.log(worker1.fullName);
+// worker1.showSalary;
+// console.log("New experience: " + worker1.showSalaryWithExperience);
+// worker1.showSalaryWithExperience;
+// worker1.experience = 1.5;
+// console.log("New experience: " + worker1.showSalaryWithExperience);
+// worker1.showSalaryWithExperience;
+// console.log("--------------");
 
 
-  // task5
+
+  // task5   'handlesFig' function get an array of  Obj of children classes, checks if Obj belongs to a parent class, shows a name of an Obj + fig square and total square of all figs
 
 class GeometricFigure {
     getArea() {
@@ -138,7 +201,7 @@ class GeometricFigure {
 }
 class Triangle extends GeometricFigure {
     constructor(side1, side2, side3) {
-        super(side1, side2, side3)
+        super(side1, side2, side3)   // or super();
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -150,7 +213,7 @@ class Triangle extends GeometricFigure {
 }
 class Square extends GeometricFigure {
     constructor(side) {
-        super(side);
+        super(side);    // or super();
         this.side = side;
     }
     getArea () {
@@ -160,7 +223,7 @@ class Square extends GeometricFigure {
 }
 class   Circle extends GeometricFigure {
     constructor(radius) {
-        super(radius);
+        super(radius);          //super()
         this.radius = radius;
     }
     getArea () {
@@ -180,5 +243,16 @@ function handleFigures (arr) {
     }
     console.log(totalArea + " //total area");
 }
+
+function handleFigures2 (figures) {                     // second option
+    return figures.reduce(function(sum, figure){
+        if (figure instanceof GeometricFigure) {
+            console.log(`Geometric figure: ${figure.toString()} - area: ${figure.getArea()}`);
+            return sum + figure.getArea;
+        }
+        throw Error("Bad argument figure");
+    }, 0)
+}
+
 const figures = [new Circle(6), new Triangle(4, 5, 6), new Square(7), new Circle(5)];
 console.log(handleFigures(figures));
