@@ -7,6 +7,36 @@
     <title>Document</title>
 </head>
 <body>
+    <p id=""text">I am learning JS events</p>
+    <div>
+        <button id="changeCSS">Change style!</button>
+    </div>
+    <button onclick="changeBackgroundcolor('blue')">Click fo page blue</button>
+    <button ondblclick="changeBackgroundcolor('pink')">Double click page pink</button>
+    <button onmousedown="changeBackgroundcolor('brown')">Click and hold to make the page brown</button>
+    <form>
+        <select name="nameChoose" id="names">
+            <option value="1">Peter</option>
+            <option value="2">John</option>
+            <option value="3">Andrew</option>
+            <option value="4">Joe</option>
+            <option value="5">James</option>
+        </select>
+        <input type="button" id="myBtn" value="Choose and Delete">
+    </form>
+    <a href="#"
+        onmouseover="changeBackgroundcolor('yellow')"
+        onmouseout="changeBackgroundcolor('white')">Hover over to make the page yellow</a>
+    <button id="liveButton">Live Button!</button>
+    <p id="myID"></p>
+    <div id="result">Window size</div>
+    <select name="country" id="country">
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>           
+    <select name="cities" id="cities"></select>
+    <p></p>
     <script src="/Homework7/homework7.js"></script>
 </body>
 </html>
