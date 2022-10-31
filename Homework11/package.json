@@ -1,0 +1,15 @@
+{
+  "name": "com.hw11.op.js",
+  "version": "1.0.0",
+  "description": "JSforTA Homework11",
+  "main": "homework11.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "hw11"
+  ],
+  "author": "OP",
+  "license": "ISC"
+}
