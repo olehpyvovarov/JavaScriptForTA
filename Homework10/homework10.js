@@ -1,7 +1,7 @@
-// task_1   destructure an object 
+// task_1   destructure an object // let [...z] = arr  - makes a copy of an array
 
 // let arr = ["Tom", "Sam", "Ray", "Bob"];
-// let [x, y, , z] = arr;
+// let [x, y, , z] = arr;   // [x, y, , ...z] last element goes as an array
 // console.log(x); // "Tom"
 // console.log(y); // "Sam"
 // console.log(z); // [Bob] ??
@@ -24,11 +24,13 @@
 
 //  function mul(...args) {
 //     let prod = 1;
+//      let isNumber;
 //     for (let i = 0; i < args.length; i++) {
-//         if (typeof args[i] === 'number') {
-//             prod = prod * args[i];
+//         if (typeof args[i] === 'number') {         // for (let i of args)
+//             prod = prod * args[i];                 // prod *= i
+//               isNumber = true;
 //     }
-//     return prod;
+//     return isNumber ? prod : 0;
 //  }
 //  console.log(mul(1, "str", 2, 3, true)); // 6
 //  console.log(mul(null, "str", false, true)); // 0

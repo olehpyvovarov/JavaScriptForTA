@@ -1,0 +1,14 @@
+{
+  "name": "homework13",
+  "version": "1.0.0",
+  "description": "testing jest",
+  "main": "homework13.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "OP",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.2.2"
+  }
+}

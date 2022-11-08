@@ -1,0 +1,32 @@
+[
+    {
+        "title": "1st title",
+        "publisher": "1st publisher",
+        "author": "1st author",
+        "cover": "/images/cover1.jpg"
+    },
+    {
+        "title": "2nd title",
+        "publisher": "1st publisher",
+        "author": "1st author",
+        "cover": "/images/cover2.jpg"
+    },
+    {
+        "title": "3rd title",
+        "publisher": "2nd publisher",
+        "author": "2nd author",
+        "cover": "/images/cover3.jpg"
+    },
+    {
+        "title": "4th title",
+        "publisher": "2nd publisher",
+        "author": "3rd author",
+        "cover": "/images/cover4.jpg"
+    },
+    {
+        "title": "5th title",
+        "publisher": "3rd publisher",
+        "author": "3rd author",
+        "cover": "/images/cover5.jpg"
+    }
+]
